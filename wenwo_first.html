@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>WENWO FIRST</title>
+
+<style>
+html{
+  background-color: #fafafa;
+}
+
+#question_item{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 504px;
+  height: 361px;
+  padding-top: 22px;
+    padding-right: 26px;
+    padding-bottom: 22px;
+    padding-left: 26px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+#written_date{
+  text-align: right;
+  display: inline;
+}
+
+#question_category_type{
+  display: inline;
+}
+
+#header_top{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+#question_title{
+  margin-top: 15px;
+
+}
+
+.user_profile{
+
+}
+
+#divide_line{
+  display: flex;
+  margin-top: 14px;
+  margin-bottom: 12px;
+  height: 1px;
+  background-color: #c8c8c8;
+}
+
+.user_lv{
+
+  border-radius: 20px;
+  border: 1px solid #ef4354;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 10px;
+  align-self: center;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 8px;
+
+}
+
+.user_position{
+  color: #ffffff;
+  background: #ef4354;
+  border-radius: 20px;
+  border: 1px solid #ef4354;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 10px;
+  align-self: center;
+  font-size: 12px;
+  line-height: 12px;
+
+  margin-left: 8px;
+}
+
+.user_title{
+  color: #ffffff;
+  background-color: #9B01FC;
+  border-radius: 20px;
+  border: 1px solid #9B01FC;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 10px;
+  align-self: center;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 8px;
+}
+
+.question_user_info{
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+
+
+.question_article{
+  display: flex;
+  width: 452px;
+  height: 144px;
+}
+
+.question_text{
+  width: 272px;
+  height: 126px;
+  margin-left: 20px;
+}
+
+.question_footer{
+
+
+  display: flex;
+
+margin-top: 30px;
+  font-size: 13px;
+
+
+}
+
+.question_answer_cnt{
+  margin-right: 12px;
+}
+
+.question_view_cnt{
+  margin-right: 12px;
+}
+
+.question_reply_cnt{
+  margin-right: 4px;
+}
+
+.question_main_img{
+  border:1px solid #c8c8c8;
+}
+
+.img_cnt{
+
+  color: white;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(33, 33, 33, 0.7);
+  position: relative;
+  left: 124px;
+  bottom: 126px;
+  align-content: center;
+
+}
+
+
+.img_cnt_text{
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+<div id="question_item">
+
+  <!-- 질문 카테고리, 날짜, 제목 -> header -->
+
+  <div id="question_header">
+
+      <div id="header_top">
+
+        <div id="question_category_type">
+          <img src="./image/img-home-qacategory-01.png"/> 여행지
+        </div>
+
+        <div id="written_date">2018.09.25</div>
+      </div>
+
+      <div id="question_title">高巨丽铁匠村 现在还有营业吗</div>
+
+    </div>
+
+  <!-- 밑줄 헤더와 본문 구분 -->
+  <div id="divide_line"></div>
+
+  <div class="question_user_info">
+
+    <div class="user_profile">
+        <img  src="./image/btn_me-noprofile.png"
+              width="42"
+              height="42"
+        />
+      </div>
+
+      <div class="user_lv">Lv.6</div>
+      <div class="user_position">한국인</div>
+      <div class="user_title">답변새내기</div>
+
+  </div>
+
+  <div class="question_article">
+
+    <div class="question_main_img">
+      <img
+      src="https://img.hanguowenwo.cn/Answer/Image/588941537879339013?x-oss-process=image/format,jpg/resize,w_160"
+      width="160"
+      height="119.6"
+      />
+
+      <div class="img_cnt">
+
+        <div class="img_cnt_text">+2</div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="question_text">
+        能告诉我什么是高巨丽铁匠村吗？ 是说高句丽 铁匠铺村？
+      还在营业！ http://www.guri.go.kr/main/gbv
+      现在好像什么也不拍了.
+    </div>
+
+  </div>
+
+  <div class="question_footer">
+
+  <div class="question_answer_cnt">
+  <img src="./image/img-adopt-answercounting.png"> 1</img>
+  </div>
+
+  <div class="question_view_cnt">
+    <img src="./image/img-adopt-readcounting.png"
+    width="12"
+    height="12"> 27</img>
+  </div>
+
+  <div class="question_reply_cnt">
+    <img src="./image/img-a-reply.png"
+    width="12"
+    height="12"> 0개의 댓글</img>
+  </div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>

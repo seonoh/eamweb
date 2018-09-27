@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html{
+      border:1px solid gray;
+    }
+    div{
+      border:10px solid tomato;
+      margin:10px;
+    }
+    #me{
+      /* static -> offset 값을 무시 정적으로 위치하게된다.  */
+      /* position: static; */
+
+
+      /* 왼쪽부터 100px 떨어진 위치 */
+      /* left:100px; */
+      /* top:100px; */
+      /* left top이 우선 */
+      /* left:20px; */
+      /* bottom: 20px; */
+
+    }
+  </style>
+</head>
+<body>
+  <div id="order">other</div>
+
+  <div id="parent">
+    parent
+    <div id="me">me</div>
+  </div>
+
+</body>
+</html>
