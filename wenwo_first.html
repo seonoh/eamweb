@@ -50,58 +50,37 @@ html{
 #divide_line{
   display: flex;
   margin-top: 14px;
-  margin-bottom: 12px;
+
   height: 1px;
   background-color: #c8c8c8;
 }
 
-.user_lv{
-
+.user{
   border-radius: 20px;
-  border: 1px solid #ef4354;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 10px;
   padding-right: 10px;
-  height: 10px;
   align-self: center;
   font-size: 12px;
   line-height: 12px;
   margin-left: 8px;
+}
 
+.user_lv{
+  border: 1px solid #ef4354;
 }
 
 .user_position{
   color: #ffffff;
   background: #ef4354;
-  border-radius: 20px;
   border: 1px solid #ef4354;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 10px;
-  align-self: center;
-  font-size: 12px;
-  line-height: 12px;
-
-  margin-left: 8px;
 }
 
 .user_title{
   color: #ffffff;
   background-color: #9B01FC;
-  border-radius: 20px;
   border: 1px solid #9B01FC;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 10px;
-  align-self: center;
-  font-size: 12px;
-  line-height: 12px;
-  margin-left: 8px;
 }
 
 .question_user_info{
@@ -110,7 +89,6 @@ html{
   margin-top: 12px;
   margin-bottom: 16px;
 }
-
 
 
 .question_article{
@@ -123,17 +101,15 @@ html{
   width: 272px;
   height: 126px;
   margin-left: 20px;
+  font-size: 16px;
+  line-height: 1.35;
+
 }
 
 .question_footer{
-
-
   display: flex;
-
-margin-top: 30px;
+  margin-top: 30px;
   font-size: 13px;
-
-
 }
 
 .question_answer_cnt{
@@ -150,9 +126,19 @@ margin-top: 30px;
 
 .question_main_img{
   border:1px solid #c8c8c8;
+  width: 160px;
+  height: 119.59px;
+}
+
+.question_main_img
+img{
+  object-fit: cover;
+  width: 160px;
+  height: 119.59px;
 }
 
 .img_cnt{
+
 
   color: white;
   width: 36px;
@@ -161,15 +147,22 @@ margin-top: 30px;
   position: relative;
   left: 124px;
   bottom: 126px;
-  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 
 }
 
 
+
 .img_cnt_text{
-  position: relative;
-  left: 10px;
-  top: 10px;
+
+  /* position: absolute; */
+  /* left: calc(50% - 8.61px); */
+  /* top: calc(50% - 9.5px); */
 }
 
 
@@ -215,9 +208,9 @@ margin-top: 30px;
         />
       </div>
 
-      <div class="user_lv">Lv.6</div>
-      <div class="user_position">한국인</div>
-      <div class="user_title">답변새내기</div>
+      <div class="user_lv user">Lv.6</div>
+      <div class="user_position user">한국인</div>
+      <div class="user_title user">답변새내기</div>
 
   </div>
 
@@ -226,9 +219,7 @@ margin-top: 30px;
     <div class="question_main_img">
       <img
       src="https://img.hanguowenwo.cn/Answer/Image/588941537879339013?x-oss-process=image/format,jpg/resize,w_160"
-      width="160"
-      height="119.6"
-      />
+      >
 
       <div class="img_cnt">
 
@@ -236,6 +227,7 @@ margin-top: 30px;
 
       </div>
 
+    </img>
 
     </div>
 
