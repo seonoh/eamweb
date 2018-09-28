@@ -6,29 +6,41 @@
       border:1px solid gray;
     }
     div{
+/*        :는 속성과 속성값을 구분해주는 구분자*/
+/*        ;선언과 선언을 구분해주는 구분자*/
       border:10px solid tomato;
       margin:10px;
     }
-    #me{
-      /* static -> offset 값을 무시 정적으로 위치하게 */
-      /* position: static; */
-      /* 왼쪽부터 100px 떨어진 위치 */
-      /* left:100px; */
-      /* top:100px; */
-      /* left top이 우선 */
-      /* left:20px; */
-      /* bottom: 20px; */
+
+    #parent{
+
+      position: relative;
 
     }
+
+
+    #child{
+
+      position: absolute;
+      left: 40px;
+      top:100px;
+
+    }
+
+
+
+
   </style>
 </head>
+
 <body>
   <div id="order">other</div>
 
   <div id="parent">
     parent
-    <div id="me">me</div>
+    <div id="child">child</div>
   </div>
 
 </body>
+
 </html>
