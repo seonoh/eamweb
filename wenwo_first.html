@@ -12,24 +12,35 @@ html{
 
 
 }
+    body{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+    }
     
 .question_container{
 
 
 
 
-    
+
     width: 1200px;
     display: flex;
     flex-basis: 1200px;
     flex-wrap: wrap;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 70px;
+    
+
 
 
 }
 
 .question_item{
-    margin: 10px;
+  margin: 10px;
   background: white;
 
 /*  display: flex;*/
@@ -190,18 +201,88 @@ img{
 
     
     position: fixed;
+    top: 0;
+    left: 0;
+    height: 62px;
+    
     width: 100%;
 
-    border: 2px solid red;
+
     background-color: white;
     
     
 }
-    .main_top_menu>*{
-        display: flex;
+.main_top_menu>*{
+    display: flex;
 
-        border: 2px solid blue;
+
+}
+    
+/*   상단 질문답변 콘텐츠 이벤트 언어변경*/
+.go{
+    height: 100%;
+    width: 1024px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+}
+    .main_logo{
+        margin-left: 90px;
+        display: flex;
+        height: 62px;
+        align-items:center;
+        justify-content: center;
     }
+    .main_logo_img{
+
+       justify-content: center;
+
+
+    }
+    
+    
+    .go_question{
+        
+        margin-right: 20px;
+        justify-content: center;
+
+    }
+    
+    .go_contents{
+        margin-right: 20px;
+    }
+    
+    .go_event{
+        margin-right: 20px;
+    }
+    
+    .signin{
+        margin-right: 90px;
+        width: auto;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    
+    .signup{
+        margin-right: 11px;
+    }
+    .vertical_divide_line{
+        margin-right: 11px;
+    }
+    .login{
+
+    }
+    
+    .vertical_divide_line{
+        width: 1px;
+        background-color: gray;
+    }
+  
     
 
 
@@ -213,13 +294,35 @@ img{
 <body>
     <div class="main_top_menu">
        
-          <div id="main_logo">
-           <img src="img-wenwo-bi.png" alt="">
-       </div>
+          <div class="main_logo">
+           <img src="img-wenwo-bi.png" class="main_logo_img"
+           style="width: 120px; height: 25px;">
+           
+           <div class="go">
+           
+                <div class="go_question" >
+                    <b>질문답변</b></div>
+                <div class="go_contents" >
+                    <b>콘텐츠</b></div>
+                <div class="go_event" >
+                    <b>이벤트</b></div>
+                <div class="go_lang_chagne">
+                    <b>언어변경</b></div>
+            
+            </div>
+            
+            <div class="signin">
+                
+                 <div class="signup">등록</div>
+                 <div class="vertical_divide_line"></div>
+                 <div class="login">로그인</div>
+                
+            </div>
+            
+           
+            
+           </div>
         
-        <div id="menu">
-            main to menuasdasdasdasdasdasdasd
-        </div>
         
     
     
