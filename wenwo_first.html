@@ -141,6 +141,8 @@
       position: relative;
         
     }
+    
+    
 
     /*    이미지가 없는 경우*/
     .question_no_image{
@@ -148,17 +150,22 @@
     }
 
     /*    이미지만 있는 경우*/
-    .question_only_image>*{
+    .question_only_image>.question_image>img{
+      object-fit: cover;
       width: 450px;
-
       border:1px solid #c8c8c8;
       height: 119.59px;
 
     } 
     
+    
+    .question_only_image + .question_text{
+        display: none;
+    }
+    
     .question_image{
         display: block;
-        width: 450px;
+        width: 100%;
         height: 119.59px;
         position: relative;
         object-fit: cover;
@@ -175,7 +182,7 @@
       width: 160px;
       height: 119.59px;
     }
-    .img_cnt{
+    .question_image .img_cnt{
 
       position: absolute;
       left: calc(100% - 36px);
@@ -265,7 +272,52 @@
     .go_lang_change{
 
         margin-right: 20px;
+        position: relative;
     }
+    
+    
+    .go_question:hover,.go_question:hover,.go_question:hover, .go_lang_change:hover{
+        color: red;
+    }
+    
+    .go_lang_change:hover>.floating_view{
+        color: black;
+        display: flex;
+        flex-direction: column;
+    }
+        
+
+    
+    .floating_view{
+
+        position: absolute;
+        margin-top: 20px;
+        width: 118px;
+        background-color: #f9f9f9;;
+        height: 174px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        display: none;
+/*
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+*/
+
+
+    }
+    
+    .locale{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        font-size: 1rem;
+        font-weight: normal;
+
+
+    }
+    
     
     .signin{
 
@@ -296,6 +348,9 @@
         width: 1px;
         background-color: gray;
     }
+    
+    
+   
   
     
 </style>
@@ -319,7 +374,18 @@
                 <div class="go_event" >
                     <b>이벤트</b></div>
                 <div class="go_lang_change">
-                    <b>언어변경</b></div>
+                    <b>언어변경</b>
+                    
+                    <div class="floating_view">
+                        
+                        <div class="locale">간체</div>
+                        <div class="locale">홍콩번체</div>
+                        <div class="locale">대만번체</div>
+                        <div class="locale">한국어</div>
+                        
+                    </div>
+                    
+                </div>
             
             </div>
             
@@ -380,17 +446,20 @@
 
           <div class="question_article">
 
-            <div class="question_main_img">
+            <div class="question_only_image">
              
-              <img src="https://img.hanguowenwo.cn/Answer/Image/588941537879339013?x-oss-process=image/format,jpg/resize,w_160"
-              >
+             
+             <div class="question_image">
+                  <img src="https://img.hanguowenwo.cn/Answer/Image/588941537879339013?x-oss-process=image/format,jpg/resize,w_504"
+                  
+                  />
 
-              <div class="img_cnt">
+                  <div class="img_cnt">
 
-                <div class="img_cnt_text">+2</div>
+                    <div class="img_cnt_text">+2</div>
 
-              </div>
-
+                  </div>
+            </div>
             
 
             </div>
@@ -442,7 +511,7 @@
                 <div class="written_date">2018.09.25</div>
               </div>
 
-              <div class="question_title">高巨丽铁匠村 现在还有营业吗22222</div>
+              <div class="question_title">高巨丽铁匠村 现在还有营业吗11111</div>
 
             </div>
 
@@ -466,19 +535,21 @@
 
           <div class="question_article">
 
-<!--           이미지가 없는 경우-->
-            <div class="question_no_image">
-              <img
-              src="https://img.hanguowenwo.cn/Answer/Image/588941537879339013?x-oss-process=image/format,jpg/resize,w_160"
-              />
+            <div class="question_only_image">
+             
+             
+             <div class="question_image">
+                  <img src="https://img.hanguowenwo.cn/Answer/Image/588941537879339013?x-oss-process=image/format,jpg/resize,w_504"
+                  
+                  />
 
-              <div class="img_cnt">
+                  <div class="img_cnt">
 
-                <div class="img_cnt_text">+2</div>
+                    <div class="img_cnt_text">+2</div>
 
-              </div>
-
-
+                  </div>
+            </div>
+            
 
             </div>
 
@@ -571,7 +642,7 @@
             </div>
 
 
-            <div class="question_text question_no_text">
+            <div class="question_text">
                 能告诉我什么是高巨丽铁匠村吗？ 是说高句丽 铁匠铺村？
               还在营业！ http://www.guri.go.kr/main/gbv
               现在好像什么也不拍了.
@@ -602,177 +673,9 @@
 
         </div>
 
-        <div class="question_item">
-
-          <!-- 질문 카테고리, 날짜, 제목 -> header -->
-
-          <div class="question_header">
-
-              <div class="header_top">
-
-                <div class="question_category_type">
-                  <img src="./image/img-home-qacategory-01.png"/> 여행지
-                </div>
-
-                <div class="written_date">2018.09.25</div>
-              </div>
-
-              <div class="question_title">高巨丽铁匠村 现在还有营业吗44444</div>
-
-            </div>
-
-          <!-- 밑줄 헤더와 본문 구분 -->
-          <div class="divide_line"></div>
-
-          <div class="question_user_info">
-
-            <div class="user_profile">
-                <img  src="./image/btn_me-noprofile.png"
-                      width="42"
-                      height="42"
-                />
-              </div>
-
-              <div class="user_lv user">Lv.6</div>
-              <div class="user_position user">한국인</div>
-              <div class="user_title user">답변새내기</div>
-
-          </div>
-
-          <div class="question_article">
-
-            <div class="question_main_img">
-              <img
-              src="https://img.hanguowenwo.cn/Answer/Image/588941537879339013?x-oss-process=image/format,jpg/resize,w_160"
-              />
-
-              <div class="img_cnt">
-
-                <div class="img_cnt_text">+2</div>
-
-              </div>
-
-           
-
-            </div>
 
 
-            <div class="question_text">
-                能告诉我什么是高巨丽铁匠村吗？ 是说高句丽 铁匠铺村？
-              还在营业！ http://www.guri.go.kr/main/gbv
-              现在好像什么也不拍了.
-            </div>
 
-          </div>
-
-          <div class="question_footer">
-
-          <div class="question_answer_cnt">
-          <img src="./image/img-adopt-answercounting.png"/> 1
-          </div>
-
-          <div class="question_view_cnt">
-            <img src="./image/img-adopt-readcounting.png"
-            width="12"
-            height="12"/> 27
-          </div>
-
-          <div class="question_reply_cnt">
-            <img src="./image/img-a-reply.png"
-            width="12"
-            height="12"/> 0개의 댓글
-          </div>
-
-
-            </div>
-
-        </div>
-
-        <div class="question_item">
-
-          <!-- 질문 카테고리, 날짜, 제목 -> header -->
-
-          <div class="question_header">
-
-              <div class="header_top">
-
-                <div class="question_category_type">
-                  <img src="./image/img-home-qacategory-01.png"/> 여행지
-                </div>
-
-                <div class="written_date">2018.09.25</div>
-              </div>
-
-              <div class="question_title">高巨丽铁匠村 现在还有营业吗55555</div>
-
-            </div>
-
-          <!-- 밑줄 헤더와 본문 구분 -->
-          <div class="divide_line"></div>
-
-          <div class="question_user_info">
-
-            <div class="user_profile">
-                <img  src="./image/btn_me-noprofile.png"
-                      width="42"
-                      height="42"
-                />
-              </div>
-
-              <div class="user_lv user">Lv.6</div>
-              <div class="user_position user">한국인</div>
-              <div class="user_title user">답변새내기</div>
-
-          </div>
-
-          <div class="question_article">
-
-            <div class="question_main_img">
-              <img
-              src="https://img.hanguowenwo.cn/Answer/Image/588941537879339013?x-oss-process=image/format,jpg/resize,w_160"
-              />
-
-              <div class="img_cnt">
-
-                <div class="img_cnt_text">+2</div>
-
-              </div>
-
-           
-
-            </div>
-
-
-            <div class="question_text">
-                能告诉我什么是高巨丽铁匠村吗？ 是说高句丽 铁匠铺村？
-              还在营业！ http://www.guri.go.kr/main/gbv
-              现在好像什么也不拍了.
-            </div>
-
-          </div>
-
-          <div class="question_footer">
-
-          <div class="question_answer_cnt">
-          <img src="./image/img-adopt-answercounting.png"/> 1
-          </div>
-
-          <div class="question_view_cnt">
-            <img src="./image/img-adopt-readcounting.png"
-            width="12"
-            height="12"/> 27
-          </div>
-
-          <div class="question_reply_cnt">
-            <img src="./image/img-a-reply.png"
-            width="12"
-            height="12"/> 0개의 댓글
-          </div>
-
-
-            </div>
-
-        </div>
     </div>
     
 </body>
