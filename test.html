@@ -1,39 +1,62 @@
 <html>
     <head>
         <meta charset="utf-8">
-            <style>
+        <style>
+
             div{
-                border: 5px solid tomato;
-
+                background-color: blue;
             }
-            #parent{
-                width: 300px;
 
+            .main_container{
+                width: 400px;
+                height: 400px;
+            }
+
+            .item{
+                width: 200px;
+                height: 200px;
                 position: relative;
-
-            }
-            #me{
-                width: 50px;
-                height: 50px;
-                background-color: black;
-                color: white;
-                position: absolute;
-
-                left: calc(50% - 25px);
+                left: 0px;
                 top: 0px;
-
             }
-            </style>
+
+            .item
+            img{
+
+                width: 200px;
+                height: 200px;
+            }
+
+            .img_cnt{
+                width: 36px;
+                height: 36px;
+                background-color: powderblue;
+                position: absolute;
+                left: calc(100% - 36px);
+                top: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        </style>   
+
+
     </head>
 
     <body>
         
-    <div id="other">other</div>
-    <div id="parent">parent
+    <div class="main_container">
 
-        <div id="me">me</div>
+        <div class="item">
+
+            <img src="bitna.jpeg"/>
+            <div class="img_cnt">+2</div>
+
+        </div>
 
     </div>
+
     </body>
 
 </html>
